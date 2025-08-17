@@ -23,7 +23,12 @@ export default function Login() {
 
 	const handleGoogleSignIn = async () => {
 		if (!isDesktop) {
-			await signInWithRedirect(auth, provider);
+			try {
+				
+				await signInWithRedirect(auth, provider);
+			} catch (error) {
+				
+			}
 		} else {
 			await signInWithPopup(auth, provider)
 				.then((result) => {

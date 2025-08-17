@@ -6,7 +6,7 @@ type Props = {
 
 function Container({ children }: Props) {
 	return (
-		<div className="w-full lg:max-w-screen-xl container mx-auto px-4">
+		<div className="w-full lg:max-w-screen-xl container mx-auto px-4 md:px-6">
 			{children}
 		</div>
 	);

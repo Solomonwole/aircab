@@ -15,7 +15,7 @@ function PageHeader() {
 						<Link
 							href="/"
 							className="text-input font-heading font-bold text-xl">
-							AIRcab
+							AirCab
 						</Link>
 					</div>
 					<nav className="flex justify-end items-end w-full">

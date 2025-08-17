@@ -7,6 +7,7 @@ interface UserObject {
 	name: string;
 	email: string;
 	phone: string | null;
+	city?: string;
 }
 
 const initialState: UserObject = {
@@ -14,6 +15,7 @@ const initialState: UserObject = {
 	name: "",
 	email: "",
 	phone: null,
+	city: "Ontario, CA",
 };
 
 export const useAppDispatch: () => AppDispatch = useDispatch;
@@ -25,8 +27,12 @@ const authSlice = createSlice({
 		setUser(_, action: PayloadAction<UserObject>) {
 			return action.payload;
 		},
+		clearUser: () => initialState,
+		setCity(state, action: PayloadAction<string>) {
+			state.city = action.payload;
+		},
 	},
 });
 
-export const { setUser } = authSlice.actions;
+export const { setUser, clearUser, setCity } = authSlice.actions;
 export default authSlice.reducer;

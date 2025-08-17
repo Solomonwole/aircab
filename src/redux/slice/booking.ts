@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type BookingState = {
-	tripType: "pickup" | "dropoff" | null;
+	tripType: "pickup" | "dropoff";
 	fromLocation: string;
 	toLocation: string;
 	date: string;
@@ -9,7 +9,7 @@ type BookingState = {
 };
 
 const initialState: BookingState = {
-	tripType: null,
+	tripType: "pickup",
 	fromLocation: "",
 	toLocation: "",
 	date: "",

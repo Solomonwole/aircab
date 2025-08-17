@@ -23,7 +23,7 @@
 	--font-text: var(--font-text);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (pryefers-color-scheme: dark) {
 	:root {
 		--background: #0a0a0a;
 		--foreground: #ededed;
@@ -53,6 +53,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+button,
+a {
 	font-family: var(--font-heading);
 }
